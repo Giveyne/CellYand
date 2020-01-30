@@ -2,6 +2,7 @@ import Cell.BoardSupplier;
 import Cell.RandomBoardSupplier;
 import Cell.FileBoardSupplier;
 import Cell.Board;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -23,8 +24,10 @@ public class Main {
         }
 
         if (boardSupplier == null) {
-            System.out.println("Wrong parameter");
-            System.out.println();
+            System.out.printf(
+                    "Wrong Options.%nOptions available:%n%6s%-20s%s%n%6s%-20s%s",
+                    "-r", "", "Generate random board;",
+                    "-f", " [filePath]", "Load board from file.");
             return;
         }
 
